@@ -1,8 +1,12 @@
 console.log("hello dava ganteng")
 const express = require('express')
+const color = require('colors')
 const dotenv = require('dotenv').config()
+const connectDb = require('./config/db')
 const { errorHandler } = require('./middleware/errorMiddleware')
 const port = process.env.PORT || 5000
+
+connectDb()
 
 const app = express()
 
